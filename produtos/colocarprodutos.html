@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAMA - MODA SUSTENTÁVEL</title>
+  <link rel="stylesheet" href="..\Agendamento\agendamentoadminstyle.css">
+  <link rel="icon" href="..\Imagens\trama_logo_small.svg">
+  <script src="..\javascript\headerProduto.js" defer></script>
+  <script src="..\javascript\Footer.js" defer></script>
+  <script src="..\javascript\menuscript.js" defer></script>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <div class="containerbg">
+    <div class="container">
+      <h2>FORMULÁRIO DE INSERÇÃO DE PRODUTO</h2>
+      <form action="../produtos/inserir_produto.php" method="POST" enctype="multipart/form-data">
+          <label for="nome"><small>NOME DO PRODUTO:</small></label><br>
+          <input type="text" id="nome" name="nome"><br>
+          
+          <label for="marca"><small>MARCA:</small></label><br>
+          <input type="text" id="marca" name="marca"><br>
+          
+          <label for="preco"><small>PREÇO COM "." (EXEMPLO: XX.XX) :</small></label><br>
+          <input type="text" id="preco" name="preco"><br>
+          
+          <label for="descricao"><Small>DESCRIÇÃO:</Small></label><br>
+          <input type="text" id="descricao" name="descricao"><br>
+  
+          <label for="imagem"><Small>IMAGEM:</Small></label><br>
+          <input type="file" id="imagem" name="imagem"><br><br>
+          <input type="submit" value="Inserir Produto">
+      </form>
+    </div>
+</div>
+
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      
+    
+</body>
+</html>

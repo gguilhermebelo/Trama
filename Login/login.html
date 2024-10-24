@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAMA - MODA SUSTENTÁVEL</title>
+  <link rel="stylesheet" href="../login/loginstyle.css">
+  <link rel="icon" href="../imagens/trama_logo_small.svg">
+  <script src="../javascript/Header.js" defer></script>
+  <script src="../javascript/menuscript.js" defer></script>
+</head>
+<body>
+
+    <div class="loginbg">
+
+      <div class="logincontainer">
+          <h5>SEJA BEM-VINDO(A)</h5>
+
+          <form action="../Login/login.php" method="POST">
+            <label for="tipo"><SMALL>TIPO DE USUÁRIO</SMALL></label><br><br>
+            <div class="radio-buttons">
+                <input type="radio" id="cliente" name="tipo" value="cliente" checked>
+                <label for="cliente">Cliente</label>
+            
+                <input type="radio" id="empresa" name="tipo" value="empresa">
+                <label for="empresa">Empresa</label>
+            </div>
+          <br><br>
+    
+            <!-- Campos comuns -->
+
+            <div id="cliente_fields">
+              <label for="cpf"><b>CPF:</b></label><br>
+              <input type="text" id="cpf" name="cpf" maxlength="14" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" title="Informe um CPF válido (somente números)."><br>
+          </div>
+  
+          <div id="empresa_fields" style="display:none;">
+              <label for="cnpj"><b>CNPJ:</b></label><br>
+              <input type="text" id="cnpj" name="cnpj" maxlength="18" pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}" title="Informe um CNPJ válido (somente números)."><br>
+          </div>
+
+            <label for="senha"><b>Senha:</b></label><br>
+            <input type="password" id="senha" name="senha" required><br>
+    
+    
+            <div class="buttons-container">
+              <input type="submit" value="ENTRAR">
+              <a href="../Cadastro/cadastro.html">AINDA NÃO TENHO UMA CONTA</a>
+              <a href="../Login/loginadm.html">ACESSO ADMINISTRATIVO</a>
+          </div>
+        </form>
+        </div>
+      </div>
+  </div>
+
+<script src="../javascript/cadastroscript.js"></script>
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+<script>  
+// Mostra os campos específicos dependendo do tipo de cadastro selecionado
+  document.getElementById('cliente').addEventListener('change', function() {
+      document.getElementById('cliente_fields').style.display = 'block';
+      document.getElementById('empresa_fields').style.display = 'none';
+  });
+
+  document.getElementById('empresa').addEventListener('change', function() {
+      document.getElementById('cliente_fields').style.display = 'none';
+      document.getElementById('empresa_fields').style.display = 'block';
+  });</script>
+
+</body>
+</html>

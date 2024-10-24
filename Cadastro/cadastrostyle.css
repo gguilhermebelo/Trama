@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: 'segoe UI', sans-serif;
+    height: 100%;
+}
+
+.containerbg {
+    background-image:
+    url('../Imagens/background.png');
+	max-width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    position: inherit;
+	height: 100%;
+	padding-bottom: 330px;
+    padding-top: 100px;
+}
+
+.container {
+    margin-top: 160px;
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
+	background-color: #fff;
+	width: 500px;
+	padding: 60px 60px 80px;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+    border-radius: 150px;
+	position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container h5{
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: -1%;
+    color: #000000;
+    align-items: center;
+}
+
+
+.container p {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Adicionado para criar espaço abaixo do parágrafo */
+}
+
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+.btn-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.salvar {
+    background: #759358;
+    display: inline-block;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    width: 250px;
+    padding: 1.2em 0;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 2px 2px 3px rgb(73, 73, 73);
+    cursor: pointer;
+    margin-right: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px;
+}
+
+.voltar {
+    background: #759358;
+    display: inline-block;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    width: 250px;
+    padding: 1.2em 0;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 2px 2px 3px rgb(73, 73, 73);
+    cursor: pointer;
+    margin-right: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px;
+}
+
+.voltar a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.voltar:hover {
+    background: #000;
+}
+
+.salvar:hover {
+    background: #008337;
+}
+
+.voltar {
+    border: none; /* Remove a borda do botão de voltar */
+}
+
+@media screen and (max-width: 768px) {
+    ul {
+      display: none; /* Esconder a lista de navegação padrão */
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+    }
+  
+    .navlink {
+      display: block;
+      padding: 20px 0;
+    }
+  
+    .login-btn {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .mobile-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px; /* Adiciona espaçamento interno */
+    }
+  
+    /* Estilizando o ícone de hambúrguer */
+    .hamburger-menu {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger-menu .bar {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: #000000;
+      margin: 5px auto;
+      transition: all 0.3s ease;
+    }
+  
+    /* Animação do ícone de hambúrguer */
+
+    /*nth-child: seleciona o primeiro filho do elemento pai  */
+    .change .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .change .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .change .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    /* Exibir a lista de navegação ao clicar no ícone de hambúrguer */
+
+    /* igual o @media só acianado para determinados tipos de tela */
+    .show {
+    /* display: block faz com que o elemento ocupe toda a largura disponível  */
+      display: block !important;
+    }
+  }
